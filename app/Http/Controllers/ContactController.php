@@ -18,6 +18,9 @@ class ContactController extends Controller{
 
       $contact->save();
 
+      Mail::to($contact->email)->send(new ContactMailer($contact));
+      
+
       return redirect()->route('contact')->with('success','message send');
     //  dd($req->all());
 
