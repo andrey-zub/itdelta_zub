@@ -3,7 +3,7 @@
 @section('content')
 <h1 class="text-muted" >Contact form</h1>
 
-<form action="{{  route('contact-form')  }}" method="post">
+<form action="{{  route('contact-form')  }}" method="POST">
   @csrf
   <div class="form-group">
     <label for="name">Name</label>
