@@ -1,7 +1,10 @@
 
 
-  @include('inc.header')
+@extends('layouts.app')
 
+@section('content')
+
+<h1 class="text-muted">Тестовые задания:</h1>
 
       <?
       echo '<h5>Задание №1 -  массив строк</h5>';
@@ -18,7 +21,7 @@
       echo '<p>';
 
         echo 'Изначальный массив:';
-        $arr = ['wadawd','dawfwegqe','qwfqegfwsad','wrgwegdgeqw'];
+        $arr = ['apple','juice','pizza','hot'];
         print_r ($arr);
 
       foreach ($arr as &$value) {
@@ -32,4 +35,4 @@
 
       ?>
 
-  @include('inc.footer')
+  @endsection

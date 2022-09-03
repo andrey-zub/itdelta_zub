@@ -18,7 +18,7 @@
 
         <!-- Styles -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
+        <link href="/css/app.css" rel="stylesheet">
         <!-- Favicons -->
     <link rel="apple-touch-icon" href="/docs/5.2/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
     <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
@@ -28,19 +28,80 @@
     <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon.ico">
     <meta name="theme-color" content="#712cf9">
 
-      </head>
+    <style>
+        html, body {
+            background-color: #fff;
+            color: #636b6f;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 200;
+            height: 120vh;
+            margin: 0;
+        }
+
+        .full-height {
+            height: auto;
+        }
+
+        .flex-center {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .position-ref {
+            position: relative;
+        }
+
+        .top-right {
+            position: absolute;
+            right: 10px;
+            top: 18px;
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        .title {
+            font-size: 84px;
+        }
+
+        .links > a {
+            color: #636b6f;
+            padding: 0 25px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: .1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .m-b-md {
+            margin-bottom: 30px;
+        }
+    </style>
+
+  </head>
+
+
 
 
 <body class="d-flex h-100  text-bg-dark">
-  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto   flex-column">
 
-    <header class="mb-auto">
+    <header class="mb-4">
         <div>
-          <h3 class="float-md-start mb-0 ">Itdelta_zub</h3>
-          <nav class="nav nav-masthead justify-content-center float-md-end">
-            <a class="nav-link fw-bold  active" aria-current="page" href="/">Home</a>
-            <a class="nav-link fw-bold " href="/test">test</a>
-            <a class="nav-link fw-bold " href="#">------</a>
+          <h3 class="float-md-start mb-0 text-warning ">Itdelta_zub</h3>
+          <nav class="nav nav-pils justify-content-center float-md-end">
+                <li class="nav-item">
+                      <a class="nav-link link-info fw-bold  active" aria-current="page" href="{{  route('home')  }}">Home</a>
+                </li>
+                <li class="nav-item">
+                      <a class="nav-link link-info fw-bold " href="{{  route('test')  }}">test Page</a>
+                </li>
+                <li class="nav-item">
+                      <a class="nav-link link-info fw-bold " href="{{  route('contact')  }}">Contact</a>
+                </li>
           </nav>
         </div>
     </header>
