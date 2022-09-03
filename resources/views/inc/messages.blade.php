@@ -1,5 +1,5 @@
 @if($errors->any())
-<p>----------------------------</p>
+<p>----------[ ERORR: ]----------</p>
 <div class="alert alert-danger">
   <ul>
     @foreach($errors->all() as $error)
@@ -10,6 +10,8 @@
 @endif
 
 @if(session('success'))
-<div class="alert alert-saccess">
+<p>----------[ SUCCESS: ]----------</p>
+<div class="alert alert-success text-center">
+  {{ session('success') }}
 </div>
 @endif

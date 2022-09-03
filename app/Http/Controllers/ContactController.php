@@ -18,8 +18,8 @@ class ContactController extends Controller{
 
       $contact->save();
 
-      return redirect()->route('home');
-      dd($req);
+      return redirect()->route('contact')->with('success','message send');
+    //  dd($req->all());
 
 
 

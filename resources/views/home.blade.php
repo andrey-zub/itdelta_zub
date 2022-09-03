@@ -1,4 +1,6 @@
-@include('inc.header')
+@extends('layouts.app')
+
+@section('content')
         <!-- Styles -->
         <style>
             html, body {
@@ -71,19 +73,24 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Laravel_test
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="https://rostov.hh.ru/resume/8517091bff0b1e21b90039ed1f45304e346331">My vacancy [ hh.ru ]</a>
+                    <a href="https://github.com/andrey-zub">My GitHub</a>
                 </div>
             </div>
         </div>
-@include('inc.footer')
+@endsection
+
+@section('backPanel')
+
+<div class="flex-center position-ref full-height">
+  <h3>This project for learning PHP framework `Laravel`</h3>
+
+
+</div>
+
+
+@endsection
