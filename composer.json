@@ -12,6 +12,7 @@
         "barryvdh/laravel-debugbar": "^3.7",
         "barryvdh/laravel-ide-helper": "^2.8",
         "bmatovu/laravel-xml": "^3.0",
+        "daniel-furmanov/laravel-formatter": "^2.0",
         "doctrine/dbal": "^2.13",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",

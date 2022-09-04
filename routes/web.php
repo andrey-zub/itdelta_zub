@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ReadXmlController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +27,5 @@ Route::get('/contact', function () {
 })->name('contact');
 
 Route::post('/contact/submit', 'ContactController@submit')->name('contact-form');
+
+Route::get("read-xml", [ReadXmlController::class, "index"]); // роут на чтение xml файла
