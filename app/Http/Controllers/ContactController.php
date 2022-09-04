@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\ContactRequest;
 use App\Models\Contact;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactMailer;
 
 class ContactController extends Controller{
 
@@ -16,12 +18,13 @@ class ContactController extends Controller{
       $contact->subject = $req->input('subject');
       $contact->message = $req->input('message');
 
-      $contact->save();
+      // $contact->save();
 
-      Mail::to($contact->email)->send(new ContactMailer($contact));
-      
+      $toEmail = "krabik358@outlook.com";
+      Mail::to($toEmail)->send(new ContactMailer($contact));
 
-      return redirect()->route('contact')->with('success','message send');
+
+      return redirect()->route('contact')->with('success','message send to {{  $contact->email  }}');
     //  dd($req->all());
 
 

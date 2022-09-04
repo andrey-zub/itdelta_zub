@@ -12,7 +12,7 @@ class ContactMailer extends Mailable
 {
     use Queueable, SerializesModels;
 
-    private $data;
+    public $data;
 
     public function __construct(Contact $data)
     {
@@ -22,8 +22,20 @@ class ContactMailer extends Mailable
 
     public function build()
     {
-      return $this->from('noreply@itdelta_zub.com', 'itdelta_zub')
-          ->subject('Форма обратной связи')
-          ->view('email.contact', ['data' => $this->data]);
+      // return $this->from('noreply@itdelta_zub.com', 'itdelta_zub')
+      //     ->subject('Форма обратной связи')
+      //     ->view('emails.contactMailer', [
+      //           'name' => $this->data->name,
+      //           'email' => $this->data->email,
+      //           'message' => $this->data->message,]);
+
+        return $this->view('contactMailer', ['data' => $this->data]);
     }
+    //
+    // public function send() {
+    //       $comment = 'Это сообщение отправлено из формы обратной связи';
+    //       $toEmail = "krabik358@outlook.com";
+    //       Mail::to($toEmail)->send(new ContactMail($comment));
+    //       return 'Сообщение отправлено на адрес '. $toEmail;
+    // }
 }
