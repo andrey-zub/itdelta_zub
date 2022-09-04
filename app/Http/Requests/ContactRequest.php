@@ -18,7 +18,8 @@ class ContactRequest extends FormRequest
         return [
             'name'=>'required',
             'email'=>'required|email',
-            'subject'=>'required|min:5|max:50',
+            'phone'=>'required|min:11',
+            'subject'=>'required|min:5|max:100',
             'message'=>'required|min:15|max:250',
 
         ];
@@ -40,6 +41,8 @@ class ContactRequest extends FormRequest
           'email.required'=>'Your email is required',
             'subject.required'=>'Subject is required',
               'message.required'=>'Message is required',
+              'phone.required'=>'Phone is required',
+
       ];
     }
 }

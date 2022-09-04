@@ -14,28 +14,13 @@ class ContactMailer extends Mailable
 
     public $data;
 
-    public function __construct(Contact $data)
-    {
-        $this->data= $data;
+    public function __construct(Contact $data){
+        $this->data= $data; // пеедача данных из объекта, для работы с формой обратной связи, конструктору класса для отправки письма
     }
 
 
-    public function build()
-    {
-      // return $this->from('noreply@itdelta_zub.com', 'itdelta_zub')
-      //     ->subject('Форма обратной связи')
-      //     ->view('emails.contactMailer', [
-      //           'name' => $this->data->name,
-      //           'email' => $this->data->email,
-      //           'message' => $this->data->message,]);
-
-        return $this->view('contactMailer', ['data' => $this->data]);
+    public function build(){
+        return $this->view('contactMailer', ['data' => $this->data]); // передача полученных данных в тело письма
     }
-    //
-    // public function send() {
-    //       $comment = 'Это сообщение отправлено из формы обратной связи';
-    //       $toEmail = "krabik358@outlook.com";
-    //       Mail::to($toEmail)->send(new ContactMail($comment));
-    //       return 'Сообщение отправлено на адрес '. $toEmail;
-    // }
+
 }
