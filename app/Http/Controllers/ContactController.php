@@ -20,11 +20,11 @@ class ContactController extends Controller{
 
       // $contact->save();
 
-      $toEmail = "krabik358@outlook.com";
+      $toEmail = "prog@it-delta.ru";
       Mail::to($toEmail)->send(new ContactMailer($contact));
 
 
-      return redirect()->route('contact')->with('success','message send to {{  $contact->email  }}');
+      return redirect()->route('contact')->with('success',"message send to {{  $contact->email  }}");
     //  dd($req->all());
 
 
